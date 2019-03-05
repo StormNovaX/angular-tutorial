@@ -1,4 +1,8 @@
 <div class="tweet-container">
+  <!-- <input (keyup)="onKey($event)">
+  <p>{{user}}</p> -->
+  <input [(ngModel)]="user">
+  <p>Bienvenue : {{user}}</p>
   <div *ngFor="let tweet of tweets" >
     <div class="tweet-header">
       <strong>{{ tweet.user }}</strong>
@@ -11,8 +15,8 @@
   </div>
   <br>
   <div>
-    <textarea #userInput></textarea>
-    <button (click)="onTweet(userInput)">Tweeter</button>
+    <textarea #userInput class="textarea"></textarea>
+    <button [disabled]="!user" (click)="onTweet(userInput)" class="send-tweet-button">Tweeter</button>
   </div>
 
 </div>

@@ -8,7 +8,7 @@ import {forEach} from '@angular/router/src/utils/collection';
   styleUrls: ['./timeline.component.less']
 })
 export class TimelineComponent implements OnInit {
-  user = 'Bob Kelso';
+  user = '';
   tweets: Tweet[] = [
      {
       created_at: 'Wed Apr 05 12:30:12 +0000 2017',
@@ -31,6 +31,7 @@ export class TimelineComponent implements OnInit {
   ngOnInit() {
   }
   onTweet(userInput) {
+    // @ts-ignore
     this.tweets.push({created_at : new Date(), id : this.tweets.length + 1, text : userInput.value, user : this.user, favoriteCount : 0});
   }
   onlike(tweet, like) {
@@ -41,6 +42,12 @@ export class TimelineComponent implements OnInit {
       tweet.favoriteCount++;
       like.className = 'fas fa-heart';
     }
+  }
+  /*onKey(event) {
+    this.user = event.target.value;
+  }*/
+  setValue(name) {
+    this.user = name;
   }
 
 }

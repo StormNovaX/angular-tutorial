@@ -12,11 +12,12 @@ import { FormsModule } from '@angular/forms';
     AppComponent,
     TimelineComponent,
     TimeAgoPipe,
-    FormsModule
+
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
