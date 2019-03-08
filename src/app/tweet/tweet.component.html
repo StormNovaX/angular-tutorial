@@ -1,0 +1,8 @@
+<div class="tweet-header">
+  <strong>{{ tweet.user }}</strong>
+  <small class="time">{{ tweet.created_at | timeAgo }}</small>
+</div>
+<div class="tweet-content">
+  {{ tweet.text }}
+</div>
+<i #like (click)="onlike(tweet,like)" class="far fa-heart" ></i><small>{{tweet.favoriteCount}}</small>

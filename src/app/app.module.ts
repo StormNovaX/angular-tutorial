@@ -6,12 +6,14 @@ import { AppComponent } from './app.component';
 import { TimelineComponent } from './timeline/timeline.component';
 import { TimeAgoPipe } from 'time-ago-pipe';
 import { FormsModule } from '@angular/forms';
+import { TweetComponent } from './tweet/tweet.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     TimelineComponent,
     TimeAgoPipe,
+    TweetComponent,
 
   ],
   imports: [
